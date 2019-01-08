@@ -102,4 +102,8 @@ export class ProductListComponent implements OnInit, OnChanges {
         
     }
 
+    onRatingClicked(message:string) : void{
+        console.log("Product list notified by star click");
+    }
+
 }
