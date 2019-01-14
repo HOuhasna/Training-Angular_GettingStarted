@@ -48,5 +48,15 @@
     "price": 35.95,
     "starRating": 4.6,
     "imageUrl": "https://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
+  },
+  {
+    "productId": 11,
+    "productName": "Video Game Controller 11",
+    "productCode": "GMG-0042-11",
+    "releaseDate": "October 15, 2015",
+    "description": "Standard two-button video game controller 11",
+    "price": 36.95,
+    "starRating": 4.7,
+    "imageUrl": "https://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
   }
 ]
