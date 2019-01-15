@@ -49,7 +49,10 @@ export class ProductListComponent implements OnInit, OnChanges {
             products => {
                 this.products = products;
                 this.filteredProducts = products;
-        }, error => this.errorMessage = <any>error
+        }, error => {
+                     this.errorMessage = <any>error;
+                     console.error(this.errorMessage);
+                    }
         )
 
     }
