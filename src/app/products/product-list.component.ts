@@ -18,6 +18,9 @@ export class ProductListComponent implements OnInit, OnChanges {
     filteredProducts : IProduct[];
     
     private _listFilter : string;
+
+    private errorMessage : string;
+
     public get listFilter() : string {
         return this._listFilter;
     }
@@ -42,8 +45,13 @@ export class ProductListComponent implements OnInit, OnChanges {
     ngOnInit() : void {
         
         console.log("We are onInit!");
-        this.products = this.productService.getProducts();
-        this.filteredProducts = this.products;
+        this.productService.getProducts().subscribe(
+            products => {
+                this.products = products;
+                this.filteredProducts = products;
+        }, error => this.errorMessage = <any>error
+        )
+
     }
 
     ngOnChanges(changes: SimpleChanges): void{
